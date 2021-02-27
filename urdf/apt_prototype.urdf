@@ -271,7 +271,7 @@
     <mu2 value="0.025"/>
   </gazebo>
 
-  <gazebo>
+  <!--gazebo>
     
     <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
       <alwaysOn>true</alwaysOn>
@@ -286,7 +286,7 @@
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>base_link</robotBaseFrame>
     </plugin>
-  </gazebo>
+  </gazebo!-->
 
 
 </robot>

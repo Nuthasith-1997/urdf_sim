@@ -6,9 +6,11 @@
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
+  <arg name="world" default="$(find urdf_sim)/world/floor6_world.world" />
 
   <!-- Open gazebo's empty world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world)"/>
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
     <arg name="paused" value="$(arg paused)"/>
@@ -36,6 +38,21 @@
   <!--node name="set_pose" pkg="urdf_sim" type="set_pose.py"/-->
 
   <!-- Set home and EKF position -->
-  <node name="rover_init" pkg="auto_pinto_2" type="rover_init.py"/>
+  <!--node name="rover_init" pkg="auto_pinto_2" type="rover_init.py"/-->
+
+  <!-- Scan filters -->
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
+    <rosparam command="load" file="$(find auto_pinto_2)/config/filter_chain.yaml" />
+    <remap from="/scan_filtered" to="/scan" />
+  </node>
+
+  <!-- Map server -->
+  <!--arg name="map_file" default="$(find auto_pinto_2)/map_files/floor66.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" >
+    <param name="frame_id" value="map"/>
+  </node-->
+
+  <!-- Static TF -->
+  <!--node name="static_tf_node" pkg="auto_pinto_2" type="static_tf_node.py" output="screen" /-->
 
 </launch>

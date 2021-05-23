@@ -272,7 +272,6 @@
   </gazebo>
 
   <!--gazebo>
-    
     <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
       <alwaysOn>true</alwaysOn>
       <updateRate>20</updateRate>
@@ -289,10 +288,10 @@
   </gazebo!-->
 
   <gazebo reference="base_scan">
-    <sensor type="ray" name="apt_laser_sensor">
+    <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
-      <update_rate>20</update_rate>
+      <update_rate>15</update_rate>
       <ray>
         <scan>
           <horizontal>
@@ -303,18 +302,18 @@
           </horizontal>
         </scan>
         <range>
-          <min>0.18</min>
+          <min>0.3</min>
           <max>50.0</max>
           <resolution>0.01</resolution>
         </range>
-        <!--noise>
+        <noise>
           <type>gaussian</type>
           <mean>0.0</mean>
           <stddev>0.01</stddev>
-        </noise-->
+        </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/mavros/obstacle/send</topicName>
+        <topicName>/scan_raw</topicName>
         <frameName>base_scan</frameName>
       </plugin>
     </sensor>

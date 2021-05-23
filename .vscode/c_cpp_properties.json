@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/nut/workspace/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/amcl/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/base_local_planner/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/carrot_planner/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/costmap_2d/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/global_planner/include/**",
+        "/home/nut/workspace/catkin_ws/src/laser_filters/include/**",
+        "/home/nut/workspace/catkin_ws/src/mavros/libmavconn/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/map_server/include/**",
+        "/home/nut/workspace/catkin_ws/src/mavros/mavros/include/**",
+        "/home/nut/workspace/catkin_ws/src/mavros/mavros_msgs/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/move_base/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/nav_core/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/navfn/include/**",
+        "/home/nut/workspace/catkin_ws/src/openslam_gmapping/include/**",
+        "/home/nut/workspace/catkin_ws/src/rf2o_laser_odometry/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/rotate_recovery/include/**",
+        "/home/nut/workspace/catkin_ws/src/mavros/test_mavros/include/**",
+        "/home/nut/workspace/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/nut/workspace/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/nut/workspace/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/home/nut/workspace/catkin_ws/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

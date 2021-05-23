@@ -9,11 +9,12 @@ from nav_msgs.msg import Odometry
 class setPose:
 	def __init__(self):
 		rospy.init_node('set_pose')
-		rospy.Subscriber('/mavros/local_position/odom', Odometry, self.set_gazebo_pose)
+		rospy.Subscriber('/odom', Odometry, self.set_gazebo_pose)
 		self.state_msg = ModelState()
 
 	def set_gazebo_pose(self, msg):
 		self.state_msg.model_name = 'apt_prototype'
+		#self.state_msg.model_name = 'turtlebot3'
 		self.state_msg.pose.position.x = msg.pose.pose.position.x
 		self.state_msg.pose.position.y = msg.pose.pose.position.y
 		self.state_msg.pose.position.z = 0 #msg.pose.pose.position.z
